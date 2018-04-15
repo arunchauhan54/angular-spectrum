@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+
+  login = {
+    title: 'My Application Title',
+    email: "My Email",
+  }
+
+
+
+  submitData() {
+    console.log(this.login.email);
+  }
+
+
 }

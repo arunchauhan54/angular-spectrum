@@ -1,33 +1,38 @@
-<div>
-  <nav class="navbar  navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+<div class="sticky-top">
+  <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
+    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Company name</a>
+    <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+    <ul class="navbar-nav px-3">
+      <li class="nav-item text-nowrap">
+        <a class="nav-link" href="#">Sign out</a>
+      </li>
+    </ul>
   </nav>
 </div>
 
-<div class="container-fluide" style="border:1px solid #cecece;">
 
+<main class="container-fluide">
   <div class="row">
-
-    <div class="col-sm-3 col-md-4 col-lg-6">
-      Hello
+    <div class="col">
+      <h1 class="text-center"> {{title}} </h1>
     </div>
-
-    <div class="col-sm-3 col-md-4 col-lg-6">
-      Hello
-    </div>
-
-    <div class="col-sm-3 col-md-4 col-lg-6">
-      Hello
-    </div>
-
-    <div class="col-sm-3 col-md-4 col-lg-6">
-      Hello
-    </div>
-
   </div>
-
-</div>
+  <div class="row">
+    <div class="col-md-4 offset-md-4">
+      <form>
+        <div class="form-group">
+          <!-- two-way binding -->
+          <input type="email" class="form-control"  name="exampleInputEmail1" 
+           placeholder="Enter email"  [(ngModel)]="login.email">
+           <!-- String interpolation -->
+          <p>{{login.email}}</p>
+        </div>
+        <div class="form-group">
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <!-- event  -->
+        <button type="button" class="btn btn-primary" (click)="submitData()">Submit</button>
+      </form>
+    </div>
+  </div>
+</main>
